@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spotify Electron Client</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Share+Tech+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/js/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/1.0.6/granim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script async defer src="https://platform.twitter.com/widgets.js"></script>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <div class="container">
+    <div class="row">
+      <div class="offset-lg-3 col-lg-6">
+        <div class="card card-block the_info">
+          <div class="col-md-3">
+            <div id="thanks"></div>
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-xs-12" id="info_title">
+                Thanks!
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div id="thanks_description">
+                  I love helping make things like this easier for the community! Please click those few buttons below to
+                  share the love!
+                </div>
+              </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="offset-md-3 col-md-9">
+              <div class="instruction-panel">
+                <div>
+                  <a class="github-button" href="https://github.com/jamesmcintyre/spotify-electron-client" data-icon="octicon-star" data-style="mega" data-count-href="/jamesmcintyre/spotify-electron-client/stargazers" data-count-api="/repos/jamesmcintyre/spotify-electron-client#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star jamesmcintyre/spotify-electron-client on GitHub">Star</a>
+                </div>
+                <div class="gh-button">
+                  <a class="github-button" href="https://github.com/jamesmcintyre" data-style="mega" data-count-href="/jamesmcintyre/followers" data-count-api="/users/jamesmcintyre#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @jamesmcintyre on GitHub">Follow @jamesmcintyre</a>
+                </div>
+                <div class="gh-button">
+                  <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="easy spotify electron client for mac!" data-url="https://goo.gl/RrTP7a" data-via="jamesmcintyre" data-hashtags="electron" data-related="electronjs,@jiahaog" data-show-count="false">Tweet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

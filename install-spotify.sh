@@ -26,7 +26,7 @@ function install_spotify_electron_client {
   echo "Viola!" &&
   echo "It'd mean a lot if you starred my repo!" &&
   echo "https://github.com/jamesmcintyre/spotify-electron-client" &&
-  open https://jamesmcintyre.github.io/spotify-electron-client/ &&
+  open https://jamesmcintyre.github.io/spotify-electron-client/thanks.html &&
   exit 1
 }
 function confirmPrompt {

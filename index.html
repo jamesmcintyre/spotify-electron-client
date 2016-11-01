@@ -5,79 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Spotify Electron Client</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/js/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Share+Tech+Mono" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/1.0.6/granim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <style media="screen" type="text/css">
-    #bg {
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-    #logo {
-      height: 7rem;
-      background-image: url(./spotify-logo.svg);
-      background-size: 80%;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    .the_info {
-      margin-top: 20rem;
-      background-color: rgba(0, 0, 0, 0.52);
-      color: white;
-    }
-    .github-links {
-      width: 15rem;
-      height: 7rem;
-      position: absolute;
-      right: 0;
-      top: 0;
-      margin-right: -16rem;
-    }
-    .github-links .gh-button {
-      margin-top: 10px;
-    }
-    #info_title {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 300;
-      font-size: 2rem;
-    }
-    #info_description {
-      font-family: "Open Sans", sans-serif;
-      font-size: .8rem;
-      margin-top: 12px;
-    }
-    #info_description a {
-      color: white;
-    }
-    .github-link {
-      background-color: rgba(0, 0, 0, 0.07);
-      border-radius: 3px;
-      height: 3rem;
-      margin-top: 22px;
-      text-align: center;
-      padding: 11px;
-    }
-
-  </style>
 </head>
 <body>
   <canvas id="bg"></canvas>
 
   <div class="container">
     <div class="row">
-      <div class="offset-sm-3 col-sm-6">
+      <div class="offset-lg-3 col-lg-6">
         <div class="card card-block the_info">
-          <div class="col-xs-3" id="logo">
-            <!-- <div id="logo"></div> -->
+          <div class="col-md-3">
+            <div id="logo"></div>
           </div>
-          <div class="col-xs-9">
+          <div class="col-md-9">
             <div class="row">
               <div class="col-xs-12" id="info_title">
                 Spotify Electron Client
@@ -94,13 +41,11 @@
         </div>
           <div class="row">
             <div class="col-xs-12">
-              <div class="github-link">
-
-              </div>
-            </div>
-            <div class="col-xs-12">
-              <div class="github-link">
-
+              <div class="instruction-panel">
+                <span id="instructions">Simply paste this into Mac OS terminal and hit enter:</span>
+                <code id="snippet" data-clipboard-text="bash <(curl -fsSL https://raw.githubusercontent.com/jamesmcintyre/spotify-electron-client/master/install-spotify.sh)">
+                  bash <(curl -fsSL https://raw.githubusercontent.com/jamesmcintyre/spotify-electron-client/master/install-spotify.sh)
+                </code>
               </div>
             </div>
           </div>
@@ -117,6 +62,6 @@
     </div>
   </div>
 
-  <script src="./main.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
