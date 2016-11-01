@@ -7,6 +7,14 @@ function node_is_installed {
   # return value
   echo "$return_"
 }
+function get_install_name {
+  local app_name=Spotify
+  if [ -d "/Applications/Spotify.app" ]
+  then
+    local app_name=SpotifyElectron
+  fi
+  echo "$app_name"
+}
 function install_spotify_electron_client {
   echo "Installing Nativefier Globally" &&
   npm install nativefier -g
@@ -15,14 +23,14 @@ function install_spotify_electron_client {
   cd spotify-electron-temp &&
   echo "Natifying Spotify" &&
   curl -O 'https://jamesmcintyre.github.io/spotify-electron-client/spotify_icon.icns' &&
-  nativefier --name "Spotify" --flash --icon ./spotify_icon.icns "https://play.spotify.com/browse" . &&
+  nativefier --name "$SPOTIFY_INSTALL_NAME" --flash --icon ./spotify_icon.icns "https://play.spotify.com/browse" . &&
   cd * &&
-  mv Spotify.app /Applications/ &&
+  mv "${SPOTIFY_INSTALL_NAME}.app" /Applications/ &&
   cd ../.. &&
   echo "Cleanup" &&
   npm uninstall -g nativefier &&
   rm -rf spotify-electron-temp/ &&
-  open /Applications/Spotify.app &&
+  open "/Applications/${SPOTIFY_INSTALL_NAME}.app" &&
   echo "Viola!" &&
   echo "It'd mean a lot if you starred my repo!" &&
   echo "https://github.com/jamesmcintyre/spotify-electron-client" &&
@@ -71,6 +79,7 @@ function declineInstall {
 }
 
 NODE_INSTALLED="$(node_is_installed)"
+SPOTIFY_INSTALL_NAME="$(get_install_name)"
 
 confirmPrompt
 if [[ $REPLY =~ ^[Yy]$ ]]
